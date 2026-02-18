@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import IconRss from "@/assets/icons/IconRss.svg";
 import Card from "@/components/Card.astro";
+import ContactForm from "@/components/ContactForm.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Hr from "@/components/Hr.astro";
@@ -21,24 +22,24 @@ const featuredPosts = posts2025AndLater.filter(({ data }) => data.featured);
 const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
 ---
 
-<Layout description="Peter Steinberger: AI-powered tools from Swift roots to web frontiers. Every commit lands on GitHub for you to fork & remix.">
+<Layout description="Harry Rebesco: Full stack web developer with 6 years of experience, based in Maitland, NSW, Australia, specialising in Django applications.">
   <StructuredData type="WebSite" data={{}} />
   <StructuredData type="Person" data={{}} />
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-6 pb-4">
       <div class="flex flex-col sm:flex-row items-start gap-4">
-        <a href="/about" class="block mx-auto sm:mx-0 group">
+        <a href="#about" class="block mx-auto sm:mx-0 group">
           <img 
             src="/peter-avatar.jpg" 
-            alt="Peter Steinberger" 
+            alt="Harry Rebesco" 
             class="w-40 h-40 rounded-full object-cover flex-shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
           />
         </a>
         <div class="flex-1 text-center sm:text-left">
           <div class="flex items-center gap-2 justify-center sm:justify-start">
             <h1 class="my-2 inline-block text-2xl font-bold sm:my-4 sm:text-3xl">
-              Hi, I'm @steipete.
+              Hi, I'm Harry.
             </h1>
             <a
               target="_blank"
@@ -56,8 +57,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
             </a>
           </div>
           <p>
-            AI-powered tools from Swift roots to web frontiers.<br />
-            Every commit lands on GitHub for you to fork & remix.
+            Full-stack web developer. Django specialist. Avid learner. Problem solver.
           </p>
           {
             // only display if at least one social link is enabled
@@ -69,6 +69,45 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
           }
         </div>
       </div>
+    </section>
+
+    <Hr />
+
+    <section id="about" class="pt-6 pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide">About</h2>
+      <div class="mt-4 flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-auto md:flex-shrink-0 md:max-w-[281px]">
+          <img src="/dogs.jpg" alt="My dogs Charlie and Yoyo" class="w-full h-auto rounded-lg" />
+        </div>
+        <div class="flex-1 min-w-0 space-y-3 leading-relaxed">
+          <p>I'm a full stack web developer with 6 years of professional experience building and shipping web products.</p>
+          <p>I'm based in Maitland, NSW, Australia.</p>
+          <p>I specialise in Django applications, with a focus on clean architecture, maintainable code, and practical product delivery.</p>
+          <p>These are my dogs Charlie and Yoyo.</p>
+        </div>
+      </div>
+    </section>
+
+    <Hr />
+
+    <section id="github-activity" class="pt-6 pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide">GitHub Activity</h2>
+      <div class="bg-secondary p-0 rounded-lg mt-4">
+        <img
+          src="https://ghchart.rshah.org/harrisonrebesco"
+          alt="Harry's GitHub Contribution Graph"
+          class="w-full"
+          style="max-width: 100%; height: auto;"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <Hr />
+
+    <section id="contact" class="pt-6 pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide">Contact me</h2>
+      <ContactForm />
     </section>
 
     <Hr />
@@ -103,7 +142,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
     }
 
     <div class="my-8 text-center">
-      <LinkButton href="/posts/">
+      <LinkButton href="/posts">
         All Posts
         <IconArrowRight class="inline-block" />
       </LinkButton>

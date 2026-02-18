@@ -1,0 +1,56 @@
+<div class="contact-box bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-6 my-8">
+  <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+    Have a project, question, or idea? Send me a message.
+  </p>
+
+  <form
+    action="https://formsubmit.co/hrebesco@live.com.au"
+    method="post"
+    class="flex flex-col gap-3"
+  >
+    <input type="hidden" name="_subject" value="New message from harry.rebes.co" />
+    <input type="hidden" name="_captcha" value="true" />
+    <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+    <input type="hidden" name="_template" value="table" />
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your name"
+      required
+      class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your email"
+      required
+      class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+    />
+    <textarea
+      name="message"
+      placeholder="Your message"
+      rows="5"
+      required
+      class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+    ></textarea>
+
+    <button
+      type="submit"
+      class="px-6 py-2 bg-accent rounded-md hover:bg-accent/90 transition-colors font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+      style="color: white;"
+    >
+      Send message
+    </button>
+  </form>
+</div>
+
+<style>
+  @media (max-width: 640px) {
+    .contact-box {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      border-radius: 0;
+    }
+  }
+</style>

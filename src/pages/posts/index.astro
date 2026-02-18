@@ -7,7 +7,7 @@ import { SITE } from "@/consts";
 import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection("blog", ({ data }) => !SITE.archiveAllPosts && !data.draft);
 
 const months = [
   "January",
@@ -25,7 +25,7 @@ const months = [
 ];
 ---
 
-<Layout title={`Posts | ${SITE.title}`} description="Archive of all blog posts by Peter Steinberger. iOS, Swift, web development, and open source insights.">
+<Layout title={`Posts | ${SITE.title}`} description="Archive of all blog posts by Harry Rebesco. iOS, Swift, web development, and open source insights.">
   <Header />
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
     <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
@@ -75,6 +75,11 @@ const months = [
               ))}
           </div>
         ))
+    }
+    {
+      posts.length === 0 && (
+        <p class="mt-6 italic">coming soon<sup>TM</sup></p>
+      )
     }
   </main>
   <Footer />

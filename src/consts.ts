@@ -16,6 +16,7 @@ interface Site {
   lightAndDarkMode: boolean;
   postPerIndex: number;
   postPerPage: number;
+  archiveAllPosts: boolean;
   scheduledPostMargin: number;
   showArchives: boolean;
   showBackButton: boolean;
@@ -31,22 +32,23 @@ interface Site {
 
 // Site configuration
 export const SITE: Site = {
-  website: "https://steipete.me/",
-  author: "Peter Steinberger",
-  profile: "https://steipete.me/about",
-  desc: "AI-powered tools from Swift roots to web frontiers. Every commit lands on GitHub for you to fork & remix.",
-  title: "Peter Steinberger",
+  website: "https://harry.rebes.co/",
+  author: "Harry Rebesco",
+  profile: "https://harry.rebes.co/about",
+  desc: "Full stack web developer with 6 years of experience, based in Maitland, NSW, Australia, specialising in Django applications.",
+  title: "Harry Rebesco",
   ogImage: "peter-avatar.jpg",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
+  archiveAllPosts: true,
   scheduledPostMargin: 15 * 60 * 1000,
   showArchives: false,
   showBackButton: false,
   editPost: {
     enabled: true,
     text: "Edit on GitHub",
-    url: "https://github.com/steipete/steipete.me/edit/main/",
+    url: "https://github.com/harrisonrebesco/rebes.co/edit/main/",
   },
   dynamicOgImage: true,
   lang: "en",
@@ -71,16 +73,16 @@ export const NAV_LINKS: SocialLink[] = [
 // Social media links
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/steipete",
+    href: "https://github.com/harrisonrebesco",
     label: "GitHub",
   },
   {
-    href: "https://twitter.com/steipete",
-    label: "Twitter",
+    href: "https://www.linkedin.com/in/harrisonrebesco/",
+    label: "LinkedIn",
   },
   {
-    href: "https://bsky.app/profile/steipete.me",
-    label: "BlueSky",
+    href: "mailto:hrebesco@live.com.au",
+    label: "Email",
   },
   {
     href: "/rss.xml",
@@ -91,8 +93,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 // Icon map for social media
 export const ICON_MAP: Record<string, string> = {
   GitHub: "github",
-  Twitter: "twitter",
-  BlueSky: "bsky",
+  LinkedIn: "linkedin",
   RSS: "rss",
   Email: "mail",
 };
