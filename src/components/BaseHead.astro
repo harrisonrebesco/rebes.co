@@ -29,8 +29,9 @@ const criticalCSS = getPageCriticalCSS(Astro.url.pathname);
 <meta name="author" content={SITE.author} />
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/peter-avatar.jpg" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4" />
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=4" />
+<link rel="apple-touch-icon" href="/profile-placeholder.svg" />
 <link rel="manifest" href="/manifest.webmanifest" />
 
 <!-- PWA Meta Tags -->
@@ -39,7 +40,7 @@ const criticalCSS = getPageCriticalCSS(Astro.url.pathname);
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Harry Rebesco" />
 <meta name="application-name" content="Harry Rebesco" />
-<meta name="msapplication-TileColor" content="#006cac" />
+<meta name="msapplication-TileColor" content="#4078f2" />
 
 <!-- Primary Meta Tags -->
 <title>{fullTitle}</title>
@@ -49,12 +50,12 @@ const criticalCSS = getPageCriticalCSS(Astro.url.pathname);
 <!-- Theme Color -->
 <meta
   name="theme-color"
-  content="#006cac"
+  content="#fafafa"
   media="(prefers-color-scheme: light)"
 />
 <meta
   name="theme-color"
-  content="#ff6b01"
+  content="#282c34"
   media="(prefers-color-scheme: dark)"
 />
 
@@ -74,14 +75,6 @@ const criticalCSS = getPageCriticalCSS(Astro.url.pathname);
 
 <!-- Canonical -->
 <link rel="canonical" href={canonicalURL} />
-
-<!-- RSS -->
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  title={`${SITE.title} | RSS Feed`}
-  href="/rss.xml"
-/>
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />

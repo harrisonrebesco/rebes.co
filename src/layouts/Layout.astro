@@ -55,7 +55,8 @@ const structuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="view-transition" content="same-origin" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=4" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -102,15 +103,6 @@ const structuredData = {
       type="application/ld+json"
       is:inline
       set:html={JSON.stringify(structuredData)}
-    />
-
-    <!-- Enable RSS feed auto-discovery  -->
-    <!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery -->
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title={SITE.title}
-      href={`${SITE.website}rss.xml`}
     />
 
     <meta name="theme-color" content="" />

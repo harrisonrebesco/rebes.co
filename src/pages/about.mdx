@@ -1,17 +1,18 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "About"
-description: "Full stack web developer with 6 years of experience, based in Maitland, NSW, Australia, specialising in Django applications."
+description: "Full stack web developer based in Maitland, NSW, Australia, specialising in Django applications."
 ---
 
 import ContactForm from '../components/ContactForm.astro';
+import { YEARS_EXPERIENCE_TEXT } from '../consts';
 
 <div class="flex flex-col md:flex-row gap-8 items-start">
   <div class="w-full md:w-auto md:flex-shrink-0 md:max-w-[281px]">
     <img src="/dogs.jpg" alt="My dogs Charlie and Yoyo" class="w-full h-auto rounded-lg" />
   </div>
   <div class="flex-1 min-w-0">
-    <p>I'm a full stack web developer with 6 years of professional experience building and shipping web products.</p>
+    <p>I'm a full stack web developer with {YEARS_EXPERIENCE_TEXT} of professional experience building and shipping web products.</p>
     <p>I'm based in Maitland, NSW, Australia.</p>
     <p>I specialise in Django applications, with a focus on clean architecture, maintainable code, and practical product delivery.</p>
     <p>These are my dogs Charlie and Yoyo.</p>

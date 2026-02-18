@@ -6,6 +6,31 @@ interface SocialLink {
   label: string;
 }
 
+const EXPERIENCE_START_YEAR = 2020;
+const EXPERIENCE_START_MONTH = 3; // March (1-based)
+const EXPERIENCE_START_DAY = 1;
+
+const getYearsExperience = (asOf = new Date()) => {
+  const startDate = new Date(EXPERIENCE_START_YEAR, EXPERIENCE_START_MONTH - 1, EXPERIENCE_START_DAY);
+  if (asOf < startDate) {
+    return 0;
+  }
+
+  const monthsElapsed =
+    (asOf.getFullYear() - EXPERIENCE_START_YEAR) * 12 +
+    (asOf.getMonth() - (EXPERIENCE_START_MONTH - 1));
+  const hasPartialMonth = asOf.getDate() > EXPERIENCE_START_DAY ? 1 : 0;
+  const monthsWithPartial = monthsElapsed + hasPartialMonth;
+
+  return Math.max(1, Math.ceil(monthsWithPartial / 12));
+};
+
+export const YEARS_EXPERIENCE = getYearsExperience();
+export const YEARS_EXPERIENCE_TEXT = `${YEARS_EXPERIENCE} ${
+  YEARS_EXPERIENCE === 1 ? "year" : "years"
+}`;
+export const EXPERIENCE_DESCRIPTION = `Full stack web developer with ${YEARS_EXPERIENCE_TEXT} of experience, based in Maitland, NSW, Australia, specialising in Django applications.`;
+
 interface Site {
   website: string;
   author: string;
@@ -35,9 +60,9 @@ export const SITE: Site = {
   website: "https://harry.rebes.co/",
   author: "Harry Rebesco",
   profile: "https://harry.rebes.co/about",
-  desc: "Full stack web developer with 6 years of experience, based in Maitland, NSW, Australia, specialising in Django applications.",
+  desc: EXPERIENCE_DESCRIPTION,
   title: "Harry Rebesco",
-  ogImage: "peter-avatar.jpg",
+  ogImage: "profile-placeholder.svg",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
@@ -84,16 +109,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "mailto:hrebesco@live.com.au",
     label: "Email",
   },
-  {
-    href: "/rss.xml",
-    label: "RSS",
-  },
 ];
 
 // Icon map for social media
 export const ICON_MAP: Record<string, string> = {
   GitHub: "github",
   LinkedIn: "linkedin",
-  RSS: "rss",
   Email: "mail",
 };

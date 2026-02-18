@@ -1,0 +1,32 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import { SITE } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title={`Resume | ${SITE.title}`} description={`Resume for ${SITE.title}`}>
+  <Header />
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-8">
+    <h1 class="mt-8 text-2xl font-semibold sm:text-3xl">Resume</h1>
+    <p class="mt-2 mb-6 italic">
+      <a href="/resume.pdf" class="underline underline-offset-4 hover:text-accent" download>
+        Download PDF
+      </a>
+    </p>
+
+    <object
+      data="/resume.pdf"
+      type="application/pdf"
+      class="h-[75vh] w-full rounded border border-border"
+    >
+      <p>
+        Unable to display the PDF in-browser.
+        <a href="/resume.pdf" class="underline underline-offset-4 hover:text-accent" download>
+          Download it here
+        </a>.
+      </p>
+    </object>
+  </main>
+  <Footer />
+</Layout>

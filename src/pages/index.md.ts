@@ -1,16 +1,16 @@
 import type { APIRoute } from "astro";
+import { SITE, YEARS_EXPERIENCE_TEXT } from "@/config";
 
 export const GET: APIRoute = async () => {
   const markdownContent = `# Harry Rebesco
 
-Full stack web developer with 6 years of experience, based in Maitland, NSW, Australia, specialising in Django applications.
+Full stack web developer with ${YEARS_EXPERIENCE_TEXT} of experience, based in Maitland, NSW, Australia, specialising in Django applications.
 
 ## Navigation
 
 - [About](/about.md)
 - [Recent Posts](/posts.md)
 - [Archives](/archives.md)
-- [RSS Feed](/rss.xml)
 
 ## Links
 
@@ -20,7 +20,7 @@ Full stack web developer with 6 years of experience, based in Maitland, NSW, Aus
 
 ---
 
-*This is the markdown-only version of harry.rebes.co. Visit [harry.rebes.co](https://harry.rebes.co) for the full experience.*`;
+*This is the markdown-only version of harry.rebes.co. Visit [harry.rebes.co](${SITE.website}) for the full experience.*`;
 
   return new Response(markdownContent, {
     status: 200,
