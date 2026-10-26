@@ -4,6 +4,6 @@
 .idea/
 
 # Local tooling
-.vercel/
+.netlify/
 .gstack/
 .impeccable/

@@ -6,4 +6,4 @@ Personal site for Harry Rebesco: a single static page with a procedurally genera
 - `public/vendor/three.min.js` is three.js r128, the last release with a UMD build.
 - `public/resume.pdf` is linked from the page.
 
-No build step. Preview locally with `python3 -m http.server -d public 8000`. Vercel serves `public/` as-is (see `vercel.json`).
+No build step. Preview locally with `python3 -m http.server -d public 8000`. Netlify serves `public/` as-is (see `netlify.toml`).
