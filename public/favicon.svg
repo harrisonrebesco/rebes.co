@@ -1,18 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Blue smile profile placeholder">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#4078f2" />
-      <stop offset="100%" stop-color="#61afef" />
-    </linearGradient>
-  </defs>
-  <circle cx="256" cy="256" r="248" fill="url(#bg)" />
-  <circle cx="186" cy="214" r="30" fill="#ffffff" />
-  <circle cx="326" cy="214" r="30" fill="#ffffff" />
-  <path
-    d="M148 306c24 56 64 82 108 82s84-26 108-82"
-    fill="none"
-    stroke="#ffffff"
-    stroke-width="28"
-    stroke-linecap="round"
-  />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#3b2c4a"/>
+  <rect y="5" width="16" height="3" fill="#8a5a74"/>
+  <rect y="7" width="16" height="2" fill="#e3a07e"/>
+  <rect x="6" y="6" width="4" height="2" fill="#ffd9a0"/>
+  <path d="M0 9h3V6h1v-1h1v1h1v3h10v7H0z" fill="#5a3f55"/>
+  <rect y="10" width="16" height="3" fill="#6a4a72"/>
+  <rect x="7" y="10" width="2" height="4" fill="#7a5236"/>
+  <rect y="13" width="16" height="3" fill="#2f3a26"/>
+  <rect x="12" y="4" width="1" height="1" fill="#fff1dc"/>
+  <rect x="3" y="2" width="1" height="1" fill="#fff1dc"/>
 </svg>
