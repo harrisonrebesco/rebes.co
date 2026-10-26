@@ -1,4 +1,4 @@
-# rebes.co
+# harry.rebes.co
 
 Personal site for Harry Rebesco: a single static page with a procedurally generated lakeside at dusk (three.js r128, vendored) and a pixel title card on top. Every visit rolls a new lake.
 

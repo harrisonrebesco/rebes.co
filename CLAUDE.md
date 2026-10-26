@@ -1,4 +1,4 @@
-# rebes.co
+# harry.rebes.co
 
 Single static page; no build step or dependencies. Everything lives in `public/`.
 
